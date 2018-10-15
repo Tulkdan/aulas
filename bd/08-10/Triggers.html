@@ -127,16 +127,8 @@ $(document).ready(function () {
 </div>
 
 
-<p>Eventos que podem automaticamente ativar uma função, ela monitora toda vez que certa ação definida for ativada. Também deve-se definir se a trigger deve ser definida para ser executada para cada linha, dependendo da quantidade de registrodos que são desejados afetar, ou seja, se for necessário modificar apenas uma linha, deverá ser definido apenas essa linha para modificar, caso for <em>x</em> linhas, deverá ser definido essas <em>x</em> linhas para serem modificadas.</p>
-<p>Existem dois modos que uma trigger pode ser realizada, antes (<em>before</em>) e depois (<em>after</em>) dos dados serem modificados na tabela.</p>
-<p>Caso uma trigger for <em>before</em>, ela será executada antes dos dados serem modificados na tabela.</p>
-<div id="beneficios" class="section level5">
-<h5>Benefícios:</h5>
-<ul>
-<li>Você consegue manipular anteriormente o dado antes de ser modificado dentro da tabela.</li>
-</ul>
-<p>Caso uma trigger for <em>after</em>, ela será executada antes dos dados serem modificados na tabela.</p>
-</div>
+<p>Eventos que podem automaticamente ativar uma função, ela monitora toda vez que certa ação definida for ativada. As Triggers não podem afetar as tabelas nas quais ele esta associado e também não devem ser muito complexos.</p>
+<p>Também deve-se definir se a trigger deve ser definida para ser executada para cada linha, dependendo da quantidade de registros que são desejados afetar, ou seja, se for necessário modificar apenas uma linha, deverá ser definido apenas essa linha para modificar, caso for <em>x</em> linhas, deverá ser definido essas <em>x</em> linhas para serem modificadas.</p>
 <div id="sintaxe" class="section level3">
 <h3>Sintaxe</h3>
 <pre><code>CREATE TRIGGER &lt;nome&gt;
@@ -147,6 +139,36 @@ $(document).ready(function () {
         &lt;comandos SQL&gt;
     END;</code></pre>
 <p><code>[FOR EACH ROW]</code> é opcional, indicando que a trigger deve ser executada para cada registro.</p>
+<p>Existem dois modos que uma trigger pode ser realizada, antes (<em>before</em>) e depois (<em>after</em>) dos dados serem modificados na tabela.</p>
+</div>
+<div id="before" class="section level3">
+<h3>Before</h3>
+<p>Neste modo de trigger os dados ainda não foram inseridos dentro da tabela, mas já são conhecidos pelo programa, mas, as regras de integridade que a tabela possui ainda não foram verificados.</p>
+<div id="vantagens" class="section level4">
+<h4>Vantagens</h4>
+<ul>
+<li>Setar valores para algumas colunas do registro que está sendo inserido</li>
+<li>Guardar os valores que serão atualizados/removidos em uma tabela de histórico</li>
+</ul>
+</div>
+</div>
+<div id="after" class="section level3">
+<h3>After</h3>
+<p>Neste modo de trigger, os dados já foram inseridos dentro da tabela, contudo, as regras de intregridade já foram passadas e não se pode mudar os valores.</p>
+<div id="vantagens-1" class="section level4">
+<h4>Vantagens</h4>
+<ul>
+<li>A trigger só será ativada após ter certeza que todas as regras de integridades foram aceitas.</li>
+</ul>
+</div>
+</div>
+<div id="new" class="section level3">
+<h3>:NEW</h3>
+<p>Só é aceito para caso a trigger receber modo de <em>INSERT</em> e <em>UPDATE</em> na tabela que a trigger esta associada.</p>
+</div>
+<div id="old" class="section level3">
+<h3>:OLD</h3>
+<p>Só é aceito para caso a trigger receber modo de <em>DELETE</em> e <em>UPDATE</em> na tabela que a trigger esta associada.</p>
 </div>
 
 

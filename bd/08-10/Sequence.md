@@ -1,6 +1,5 @@
 ---
 title: Sequence
-author: Pedro Correa
 output: html_document
 ---
 

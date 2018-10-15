@@ -1,6 +1,5 @@
 ---
 title: Indexes
-author: Pedro Correa
 output: html_document
 ---
 

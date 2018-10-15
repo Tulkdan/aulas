@@ -1,0 +1,155 @@
+# União
+
+$$A \bigcup B = \{x | x \in A ou x \in B\}$$
+
+### Exemplo
+
+$$A = \{0, 1, 2\}$$
+
+$$B = \{2, 4, 6\}$$
+
+$$A \bigcup B = \{0, 1, 2, 4, 6\}$$
+
+***
+
+# Intersecção
+
+$$A \bigcap B = \{x | x \in A e x \in B\}$$
+
+### Exemplo
+
+$$A = \{0, 2, 4\}$$
+
+$$B = \{1, 2, 3, 4\}$$
+
+$$A \bigcap B = \{2, 4\}$$
+
+***
+
+# Diferença
+
+$$A - B = \{x | x \in A e x \notin B\}$$
+
+### Exemplo
+
+$$A = \{0, 1, 2, 3\}$$
+
+$$B = \{1, 3, 5\}$$
+
+$$A - B = \{0, 2\}$$
+
+### Desafio
+
+Seja A U B conjuntos de um universo U
+
+$$n(A - B) = \{x \in U | x \in A e x \notin B \} = n(A) - n(A \bigcap B)$$
+$$n(A \bigcup B) = \{x \in U | x \in A ou x \in B \} = n(A) + n(B) - n(A \bigcap B)$$
+
+***
+
+# Relação entre dois conjuntos
+
+Dados A, B dois conjuntos vazios uma relação de A em B é qualquer subconjunto de AxB
+
+1. Se A possui 3 elementos e B possui 2 elementos
+
+>
+a) AxB possui 6
+b) BxA possui 6
+>
+
+$$n(A \times B) = n(A) . n(B)$$
+
+2. Se AxB possui 6 elementos, quantas relações diferentes de A em B podemos obter?
+
+$$n(Ri) = 2^6$$
+
+Onde R é o conjunto de todas as relações de A em B
+
+***
+
+# Domínio, Contradomínio e Imagem
+
+Dados A, B conjuntos não vazios e
+$$R \subset A \times B (R: A \to B)$$
+
+## Domínio de R
+
+$$D(R) = \{x \in A | \exists y \in B : (x,y) \in R \}$$
+
+## Contradomínio de R
+
+$$CD(R) = B$$
+$$Tn(R) = \{y \in B | \exists x \in A : (x,y) \in R\}$$
+
+***
+
+# Endorelação
+
+Seja
+
+$$R \subset A \times A^A$$
+
+onde A é um conjunto não vazio
+
+$$(A \neq \varnothing)$$
+
+Ou seja, R é uma relação em A. Dizemos então que R é uma endorelação em A
+
+### Exemplo
+$$A = \{10, 100, 10000\}$$
+$$R = \{(x,y) \in A^2 | 10x = y\}$$
+
+$$R = \{(10, 100), (100, 10000)\}$$
+$$D(R) = \{10, 100\}$$
+$$CD(R) = A$$
+$$Im(R) = \{100, 10000\}$$
+
+## Propriedades das Endorelação
+
+Sejam o conjunto A e
+$$R \subset A^2$$
+
+R pode gozar das seguintes propriedades:
+
+#### 1. Propriedade Reflexiva (ou reflexividade)
+
+R é uma relação reflexiva quando possui todas as combinações de pares possíveis do domínio.
+
+##### Exemplo
+$$A = \{0, 1, 2\}$$
+$$R1 = \{(0,1),(0,0)(1,2),(2,2),(1,1)\}$$
+
+#### 2. Propriedade Irreflexiva
+
+R é irreflexiva quando não possui nenhuma combinação de pares do domínio
+
+##### Exemplo
+$$A = \{0, 1, 2\}$$
+$$R1 = \{(0,1),(1,2),(2,1)\}$$
+
+#### 3. Propriedade Simétrica
+
+R é simétrica quando todas as combinações formadas possuem uma simetria (valores trocados na ordem)
+
+##### Exemplo
+$$A = \{0, 1, 2\}$$
+$$R1 = \{(0,0), (1,2),(2,1),(2,2)\}$$
+
+#### 4. Propriedade Antisimétrica
+
+R é antisimétrica quando não tiver nenhum combinação simétrica
+
+##### Exemplo
+$$A = \{0, 1, 2\}$$
+$$R1 = \{(0,1),(1,2),(0,0),(1,1)\}$$
+
+#### 5. Propriedade Transitiva
+
+R é uma relação transitiva quando duas combinações do domínio juntas formam alguma combinação formada
+
+##### Exemplo
+$$A = \{0, 1, 2\}$$
+$$R1 = \{(0,1),(1,2),(0,2),(2,2)\}$$
+$$0R1 e 1R2 \to 0R2$$
+$$1R2 e 2R2 \to 1R2$$

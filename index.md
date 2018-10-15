@@ -4,7 +4,22 @@ author: Pedro Correa
 output: html_document
 ---
 
+# Banco de Dados
+
 Dia    | Matéria
 ------ | ----------------------------------------------------------------------
-01/10  | [Indexes](01-10/Indexed.html)
-08/10  | [Sequence](08-10/Sequence.html); [Triggers](08-10/Triggers.html); [PL/SQL](08-10/PL-SQL.html)
+01/10  | [Indexes](bd/01-10/Indexed.html)
+08/10  | [Sequence](bd/08-10/Sequence.html); [Triggers](bd/08-10/Triggers.html); [PL/SQL](bd/08-10/PL-SQL.html)
+15/10  | [Procedure](bd/15-10/Procedure.html)
+
+# Cálculo
+
+Dia    | Matéria
+------ | ----------------------------------------------------------------------
+01/10  | [Resumo](calculo/resumo.html)
+
+# Estrutura
+
+Dia    | Matéria
+------ | ----------------------------------------------------------------------
+04/10  | [AVL Tree](estrutura/avl_tree/index.html)
