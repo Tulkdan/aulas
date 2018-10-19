@@ -1,3 +1,8 @@
+---
+title: Árvore AVL
+author: Pedro Correa
+output: html_document
+---
 # Árvore AVL
 
 Árvores AVLs vem para arrumar a árvore para balancear, caso a árvore tenha mais filhos do lado direito que o esquerdo ou vice versa.
@@ -31,6 +36,12 @@ void rotacaoEsq (p_no n) {
 ## Caso B
 
 Ele é necessário fazer duas rotações para a direita, podendo desmembrar nas duas rotações simples já conhecidas, uma no filho para a esquerda, outra no pai para a direita
+
+```
+Rotação dupla esquerda = rotação direita no filho + rotação esquerda
+
+Rotação dupla direita = rotação esquerda no filho + rotação direita
+```
 
 ## Caso D
 
