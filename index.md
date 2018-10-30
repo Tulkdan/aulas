@@ -24,6 +24,7 @@ Dia    | Matéria
 ------ | ----------------------------------------------------------------------
 04/10  | [AVL Tree](estrutura/avl_tree/index.html)
 18/10  | [B Tree](estrutura/b_tree/index.html)
+25/10  | [Grafos](estrutura/graphs/index.html)
 
 # Engenharia de Software
 

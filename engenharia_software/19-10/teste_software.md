@@ -16,15 +16,15 @@ Nome                            | Significado
 
 # Testes de caixa branca
 
-Nome                       | Significado
--------------------------- | --------------------------------------------------
-**Teste de execução**      | Verifica os tempos de resposta de processamento e desempenho
-**Teste de estresse**      | Avalia o comportamento do software sobre condições críticas
-**Teste de recuperação**   | Avalia o comportamento do software após se recuperar de alguma falha
+Nome                            | Significado
+------------------------------- | ---------------------------------------------
+**Teste de execução**           | Verifica os tempos de resposta de processamento e desempenho
+**Teste de estresse**           | Avalia o comportamento do software sobre condições críticas
+**Teste de recuperação**        | Avalia o comportamento do software após se recuperar de alguma falha
 
 # Níveis de teste
 
-Nome                     | Significado
------------------------- | ----------------------------------------------------
-**Testes unitário**      | É aplicado aos menores componenetes de código
-**Testes de integração** | É feito ao término de cada iteração para validar a execução das funções
+Nome                            | Significado
+------------------------------- | ---------------------------------------------
+**Testes unitário**             | É aplicado aos menores componenetes de código
+**Testes de integração**        | É feito ao término de cada iteração para validar a execução das funções
