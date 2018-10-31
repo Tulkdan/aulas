@@ -32,7 +32,39 @@ Bom, mas como podemos encontrá-la?
 Podemos fazer por força bruta, assim testaremos todas as combinações possíveis e escolhemos a que der a menor soma.
 Mas acabamos encontrando problemas pois a implementação deste modo é difícil e muito custosa, pois o grafo pode ter *n* árvores geradores dentro de si.
 
-Podemos encontrar o MST de maneira linear utilizando as propriedades. 
+## Algoritmos Gulosos (Greedy Algorithms)
+
+O algoritmo de Prim é também conhecido como **Algoritmos Gulosos**, que são algoritmos conhecidos por fazerem a melhor escolha no momento.
+Essa estratégia não oferece a garantia de encontrar uma solução globalmente perfeitas para o problema.
+Mas com ela conseguimos provar uma MST.
+
+Em seguida temos um exemplo de um lógica genérica para se encontrar a MST.
+
+```
+void GenericoMST() { 
+    S = ∅;
+    while(S não constitui uma árvore geradora mínima) { 
+        (u, v) = seleciona(A);
+        if (aresta (u, v) é segura para) 
+            S = S + {(u, v )};
+    }
+    return S ;
+}
+```
+
+Antes de cada iteração, S é um subconjunto de uma MST.
+A cada aresta que verificamos, adicionamos a S a aresta (u,v) que não viola a variante.
+Essa aresta é chamada de *aresta segura*.
+
+Dentro do *while*, S tem que fazer parte do subconjunto prórpio da MST T, e quando existir uma aresta (u,v) que pertence a T e que não pertence a S e é considerado uma *aresta segura*, ele é adicionado ao conjunto de S.
+
+## Algoritmo de Prim
+
+Este algoritmo pode ser derivado do algoritmo anterior e a operação é muito semelhante ao algoritmo de Dijkstra para localizar o caminho mais curto em um grafo.
+Neste algoritmo, o MST é gerada em um ponto escolhido arbitrariamente, e a partir desde ponto, começamos adicionar as arestas que possuem o valor mínimo que ligam para algum ponto que não esteja conectada a subárvore, ou seja, apenas liga *arestas seguras*.
+
+
+Os algorítmos de Prim de Kruskal possuem similaridade no tempo de execução que as pontas estão pré-ordenadas pelo peso.
 
 ### Links
 
@@ -50,4 +82,7 @@ Podemos encontrar o MST de maneira linear utilizando as propriedades.
 
 [Conceitos básicos de grafo](https://www.youtube.com/watch?v=MC0u4f334mI)
 
-Algorítimos para pesquisar: *Prim* e *Kruskal*
+[Livro para suporte](http://www2.dcc.ufmg.br/livros/algoritmos/cap7/slides/c/completo1/cap7.pdf)
+
+[Livro para suporte 2](http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
+
