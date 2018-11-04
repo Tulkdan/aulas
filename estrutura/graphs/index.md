@@ -19,6 +19,7 @@ Diferente do modo de busca de largura da árvore, o foco é no peso das arestas,
 Mas a MST tem algumas propriedades que devem ser prestadas atenção para saber se um grafo pode ser MST:
 
 * O problema possui solução apenas se o grafo for **conexo**.
+* Deverá conectar todos os vértices do grafo
 * Não possui nenhum ciclo.
 * Grafo não-direcionado
 * Grafo ponderado
@@ -34,19 +35,19 @@ Mas acabamos encontrando problemas pois a implementação deste modo é difícil
 
 ## Algoritmos Gulosos (Greedy Algorithms)
 
-O algoritmo de Prim é também conhecido como **Algoritmos Gulosos**, que são algoritmos conhecidos por fazerem a melhor escolha no momento.
+**Algoritmos Gulosos**, que são algoritmos conhecidos por fazerem a melhor escolha no momento.
 Essa estratégia não oferece a garantia de encontrar uma solução globalmente perfeitas para o problema.
 Mas com ela conseguimos provar uma MST.
 
 Em seguida temos um exemplo de um lógica genérica para se encontrar a MST.
 
-```
+```{c}
 void GenericoMST() { 
-    S = ∅;
+    S = {};
     while(S não constitui uma árvore geradora mínima) { 
         (u, v) = seleciona(A);
         if (aresta (u, v) é segura para) 
-            S = S + {(u, v )};
+            S = S + {(u, v)};
     }
     return S ;
 }
@@ -58,13 +59,38 @@ Essa aresta é chamada de *aresta segura*.
 
 Dentro do *while*, S tem que fazer parte do subconjunto prórpio da MST T, e quando existir uma aresta (u,v) que pertence a T e que não pertence a S e é considerado uma *aresta segura*, ele é adicionado ao conjunto de S.
 
+## Corte | Aresta segura
+
+Um corte é quando dividimos em parte o grafo, transformando o grafo em duas partes (V, S-V).
+
+* `Um corte (V′, V−V′) de um grafo não direcionado G = (V, A) é uma partição de V.`
+
+Neste corte há algumas arestas que o cruzam e estas arestas ligam um nó com outro nó, 
+
+* `Uma aresta (u, v) ∈ A cruza o corte (V′, V−V′) se um de seus vértices  pertence a V′ e o outro vértice pertence a V−V′.`
+
+assim, uma dessas arestas será parte da MST,
+
+* `Um corte respeita um conjunto S de arestas se não existirem arestas em S que o cruzem.`
+
+e como a MST necessita da aresta de menor peso, escolhemos a aresta que cruza esse corte para fazer parte da MST, essa aresta de valor mais baixo é chamada de **aresta leve**
+
+* `Uma aresta cruzando o corte que tenha custo mínimo sobre todas as
+arestas cruzando o corte é uma aresta leve.`
+
+Fazemos isso até conectarmos todos os nós do grafo.
+
 ## Algoritmo de Prim
 
 Este algoritmo pode ser derivado do algoritmo anterior e a operação é muito semelhante ao algoritmo de Dijkstra para localizar o caminho mais curto em um grafo.
-Neste algoritmo, o MST é gerada em um ponto escolhido arbitrariamente, e a partir desde ponto, começamos adicionar as arestas que possuem o valor mínimo que ligam para algum ponto que não esteja conectada a subárvore, ou seja, apenas liga *arestas seguras*.
+
+![Exemplo do algoritmo de Prim](PrimAlgDemo.gif)
+
+Neste algoritmo, o MST é gerada em um ponto escolhido arbitrariamente e a partir desde ponto, começamos adicionar as arestas que possuem o valor mínimo que ligam para algum ponto que não esteja conectada a subárvore e que tenha o valor mais baixo comparado a outros, ou seja, apenas liga *arestas seguras*.
+Assim, quando é finalizado, as arestas encontradas formam uma MST.
 
 
-Os algorítmos de Prim de Kruskal possuem similaridade no tempo de execução que as pontas estão pré-ordenadas pelo peso.
+Os algorítmos de Prim e de Kruskal possuem similaridade no tempo de execução quando as pontas estão pré-ordenadas pelo peso.
 
 ### Links
 
@@ -85,4 +111,6 @@ Os algorítmos de Prim de Kruskal possuem similaridade no tempo de execução qu
 [Livro para suporte](http://www2.dcc.ufmg.br/livros/algoritmos/cap7/slides/c/completo1/cap7.pdf)
 
 [Livro para suporte 2](http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
+
+[prim](https://pt.wikipedia.org/wiki/Algoritmo_de_Prim)
 
