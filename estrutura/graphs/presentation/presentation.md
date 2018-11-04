@@ -1,6 +1,6 @@
 ---
 title: Árvore Geradora Mínima
-author: Felipe Theodoro | Juan | Pedro Correa | Ygor Gazola
+author: Felipe Theodoro | Juan Domingos | Pedro Correa | Ygor Gazola
 output:
     ioslides_presentation:
         widescreen: true
@@ -73,4 +73,6 @@ arestas cruzando o corte é uma aresta leve.
 
 ---
 
-![](PrimAlgDemo.gif)
+<p align="center">
+<img src="PrimAlgDemo.gif">
+</p>
