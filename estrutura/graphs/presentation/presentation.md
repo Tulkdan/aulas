@@ -15,10 +15,16 @@ toc: yes
 - Deverá conectar todos os vértices do grafo
 - Deverá conter o caminho que possui o menor peso.
 
+<div class="notes">
+- Árvore dentro do grafo
+- Possui o caminho de menor peso
+</div>
+
+
 ## Para ser considerada AGM
 
 <p align="center"> 
-<img src="mst.png">
+<img src="../img/mst.png">
 </p>
 
 - Grafo deve ser conexo
@@ -54,12 +60,12 @@ Dentro do *while*, S tem que fazer parte do subconjunto prórpio da MST T, e qua
 ## Corte | Aresta segura
 
 <p align="center"> 
-<img src="mst-greedy.png" style="width: 70%;">
+<img src="../img/mst-greedy.png" style="width: 70%;">
 </p>
 
 <div class="notes">
 - Um corte (V′, V−V′) de um grafo não direcionado G = (V, A) é uma partição de V.
-- Uma aresta (u, v) ∈ A cruza o corte (V′, V−V′) se um de seus vértices  perrtence a V′ e o outro vértice pertence a V−V′.
+- Uma aresta (u, v) ∈ A cruza o corte (V′, V−V′) se um de seus vértices  pertence a V′ e o outro vértice pertence a V−V′.
 - Um corte respeita um conjunto S de arestas se não existirem arestas em S que o cruzem.
 - Uma aresta cruzando o corte que tenha custo mínimo sobre todas as
 arestas cruzando o corte é uma aresta leve.
@@ -68,11 +74,46 @@ arestas cruzando o corte é uma aresta leve.
 ## Algoritmo de Prim
 
 <p align="center"> 
-<img src="250px-Prim.PNG" style="width: 35%;">
+<img src="../img/250px-Prim.PNG" style="width: 35%;">
 </p>
+
+<div class="notes">
+- Escolhido a partir de um ponto
+- Seleciona as arestas seguras de menor peso
+- Repita o passo anterior até todos os vértices estarem conectados
+</div>
 
 ---
 
 <p align="center">
-<img src="PrimAlgDemo.gif">
+<img src="../img/PrimAlgDemo.gif" style="width: 50%;">
 </p>
+
+## Algoritmo de Kruskal
+
+<p align="center">
+<img src="../img/kruskal.png" style="width: 60%;">
+</p>
+
+<div class="notes">
+- *S* é uma floresta
+- Ordena as arestas por peso
+- Seleciona a aresta de menor peso da floresta
+- Seleciona outra aresta segura de menor peso
+- Repita até todos os vértices estarem conectados
+</div>
+
+---
+
+<p align="center">
+<img src="../img/KruskalDemo.gif" style="width: 50%;">
+</p>
+
+## Prim *vs* Kruskal
+
+- **Prim** : Melhor quando se tem um grafo muito denso com mais pontos que vértices
+- **Kruskal** : Melhor quando se tem um grafo esparço
+
+<div class="notes">
+Use o algoritmo de Prim quando se tem um grafo com mais pontos que vértices, se não use o algortimos de Kruskal
+</div>

@@ -36,6 +36,7 @@ Mas acabamos encontrando problemas pois a implementação deste modo é difícil
 ## Algoritmos Gulosos (Greedy Algorithms)
 
 **Algoritmos Gulosos**, que são algoritmos conhecidos por fazerem a melhor escolha no momento.
+O nome **guloso** é por causa que o algoritmo ele vai *engolindo* e adicionando os resultados, e no final, terá o resultante requerido.
 Essa estratégia não oferece a garantia de encontrar uma solução globalmente perfeitas para o problema.
 Mas com ela conseguimos provar uma MST.
 
@@ -84,13 +85,19 @@ Fazemos isso até conectarmos todos os nós do grafo.
 
 Este algoritmo pode ser derivado do algoritmo anterior e a operação é muito semelhante ao algoritmo de Dijkstra para localizar o caminho mais curto em um grafo.
 
-![Exemplo do algoritmo de Prim](PrimAlgDemo.gif)
+![Exemplo do algoritmo de Prim](img/PrimAlgDemo.gif)
 
-Neste algoritmo, o MST é gerada em um ponto escolhido arbitrariamente e a partir desde ponto, começamos adicionar as arestas que possuem o valor mínimo que ligam para algum ponto que não esteja conectada a subárvore e que tenha o valor mais baixo comparado a outros, ou seja, apenas liga *arestas seguras*.
+Neste algoritmo, o MST é gerada em um ponto escolhido arbitrariamente e a partir desde ponto, começamos adicionar as arestas que possuem o valor mínimo que ligam para algum ponto que não esteja conectada a subárvore, ou seja, verifica todas as *arestas seguras* a partir dos pontos que estejam no MST.
 Assim, quando é finalizado, as arestas encontradas formam uma MST.
 
+## Algoritmo de Kruskal
 
-Os algorítmos de Prim e de Kruskal possuem similaridade no tempo de execução quando as pontas estão pré-ordenadas pelo peso.
+Neste algoritmo não começamos por um ponto no grafo, criamos uma *floresta* com as arestas, então, a primeira coisa que é realizada é ordenar todos as arestas pelo peso.
+Após isso, selecionamos as arestas de peso menor e que sejam consideradas *segura*.
+
+![Exemplo do algoritmo de Kruskal](img/kruskal.png)
+
+As arestas não precisam estar conectado em um ponto em comum, como ocorre no algoritmo de Prim, são focados em arestas que podem estar em qualquer lugar no grafo mas que sejam seguros e que tenham o menor peso.
 
 ### Links
 
@@ -112,5 +119,7 @@ Os algorítmos de Prim e de Kruskal possuem similaridade no tempo de execução 
 
 [Livro para suporte 2](http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
 
-[prim](https://pt.wikipedia.org/wiki/Algoritmo_de_Prim)
+[Prim](https://pt.wikipedia.org/wiki/Algoritmo_de_Prim)
+
+[Diferença de Prim com Kruskal](https://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
 
