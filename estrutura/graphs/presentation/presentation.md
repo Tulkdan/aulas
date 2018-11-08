@@ -1,12 +1,13 @@
 ---
 title: Árvore Geradora Mínima
-author: Felipe Theodoro | Juan Domingos | Pedro Correa | Ygor Gazola
+author: Felipe Theodoro | Flávio Gilberto | Juan Domingos | Pedro Correa | Rafael Vedovatto | Ygor Gazola
 output:
     ioslides_presentation:
         widescreen: true
         bigger: true
         transition: 0.5
 toc: yes
+bibliography: bibliography.bib
 ---
 
 ## O que é
@@ -117,3 +118,9 @@ arestas cruzando o corte é uma aresta leve.
 <div class="notes">
 Use o algoritmo de Prim quando se tem um grafo com mais pontos que vértices, se não use o algortimos de Kruskal
 </div>
+
+## Bibliografia
+
+- FEOFILOFF, Paulo. Árvores geradoras de grafos não-dirigidos: História. 2017. Disponível em: <https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/spanningtrees.html>. Acesso em: 30 out. 2018.
+- ALMEIDA, Charles Ornelas; GUERRA, Israel; ZIVIANI, Nivio. Algoritmo em grafo. Disponível em: <http://www2.dcc.ufmg.br/livros/algoritmos/cap7/slides/c/completo1/cap7.pdf>. Acesso em: 01 nov. 2018.
+- CORMEN, Thomas H. Árvores Epalhadas Mínimas. In: CORMEN, Thomas H.; LEISERSON, Charles E.; RIVEST, Ronald L. Algoritmos: Teoria e Prática. [S.l.]: Editora Campus, 2002. p. 445-454. Disponível em: <http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf>. Acesso em: 01 nov. 2018.

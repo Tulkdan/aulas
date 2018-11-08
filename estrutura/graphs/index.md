@@ -1,7 +1,11 @@
 ---
 title: Grafos
 author: Pedro Correa
-output: html_document
+output: 
+    pdf_document:
+        citation_package: biblatex
+keep_tex: TRUE
+bibliography: presentation/bibliography.bib
 ---
 
 # Motivação
@@ -123,3 +127,4 @@ As arestas não precisam estar conectado em um ponto em comum, como ocorre no al
 
 [Diferença de Prim com Kruskal](https://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
 
+# References
