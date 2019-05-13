@@ -31,3 +31,7 @@ Dia    | Matéria
 Dia    | Matéria
 ------ | ----------------------------------------------------------------------
 19/10  | [Qualidade de Software](engenharia_software/19-10/index.html); [Teste de Softwares](engenharia_software/19-10/teste_software.html)
+18/02  | [Diagrama de classes](engenharia_software/18-02/main.html)
+18-03  | [Diagrama de Sequência](engenharia_software/18-03/index.html)
+22/04  | [Diagramas](engenharia_software/22-04/index.html)
+29/04  | [Documentação casos de uso](engenharia_software/29-04/main.html)
