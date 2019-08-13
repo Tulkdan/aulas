@@ -60,3 +60,9 @@ output: html_document
 > Dia    | Matéria
 > ------ | ----------------------------------------------------------------------
 > 07/08  | [Introdução](sixth-period/LingFormaisAutomatos/07-08/index.html)
+
+> ### SO
+>
+> Dia    | Matéria
+> ------ | ----------------------------------------------------------------------
+> 12/08  | [Arquivos](sixth-period/SO/12-08/index.html)
