@@ -54,6 +54,7 @@ output: html_document
 > Dia    | Matéria
 > ------ | ----------------------------------------------------------------------
 > 06/08  | [Introdução](sixth-period/Redes/06-08/index.html)
+> 13/08  | [DNS](sixth-period/Redes/13-08/index.html)
 
 > ### Linguagens Formais e Automatos
 >
