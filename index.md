@@ -61,6 +61,7 @@ output: html_document
 > Dia    | Matéria
 > ------ | ----------------------------------------------------------------------
 > 07/08  | [Introdução](sixth-period/LingFormaisAutomatos/07-08/index.html)
+> 14/08  | [Sintaxes e Semântica](sixth-period/LingFormaisAutomatos/14-08/index.html)
 
 > ### SO
 >
