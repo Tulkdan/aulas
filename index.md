@@ -62,6 +62,7 @@ output: html_document
 > ------ | ----------------------------------------------------------------------
 > 07/08  | [Introdução](sixth-period/LingFormaisAutomatos/07-08/index.html)
 > 14/08  | [Sintaxes e Semântica](sixth-period/LingFormaisAutomatos/14-08/index.html)
+> 28/08  | [Linguagem e Gramática](sixth-period/LingFormaisAutomatos/28-08/index.html)
 
 > ### SO
 >
