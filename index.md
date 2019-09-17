@@ -69,3 +69,4 @@ output: html_document
 > Dia    | Matéria
 > ------ | ----------------------------------------------------------------------
 > 12/08  | [Arquivos](sixth-period/SO/12-08/index.html)
+> 16/08  | [Sistemas de Arquivos](sixth-period/SO/16-09/index.html)
