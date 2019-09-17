@@ -1,6 +1,9 @@
 ---
 title: Sistemas de arquivos
+author: Pedro Correa
 ---
+
+[Referência do resumo foi tirado deste artigo](https://pt.m.wikibooks.org/wiki/Sistemas_operacionais/Sistemas_de_arquivos)
 
 Os sistemas de arquivos estruturam a informação guardada em uma unidade de armazenamento, podendo ser representada de forma textual ou graficamente.
 O habitual é utilizar dispositivos de armazenamento de dados que permitem o acesso aos dados como uma corrente de blocos de um mesmo tamanho, usualmente de 512 bytes de largura.
@@ -102,8 +105,8 @@ Um I-node são os metadados, armazenado em estrutura de dados própria, que rela
 Uma cache de disco pode ser definida como parte da memória RAM ou memória buffer cache, utilizada para acelerar o acesso aos dados que estão sendo mais frequentemente requeridos.
 Para isso a cache de disco pode ser implementado de duas formas principais:
 
-1- Através da memória RAM inserida no próprio disco rígido
-2- Utilização de parte da memória RAM
+1. Através da memória RAM inserida no próprio disco rígido
+2. Utilização de parte da memória RAM
 
 Caches de disco rígido são mais eficientes, mas são também muito mais caras.
 Todos os discos rígidos modernos possuem uma cache interna.

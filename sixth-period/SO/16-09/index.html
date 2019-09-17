@@ -9,6 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Pedro Correa" />
 
 
 <title>Sistemas de arquivos</title>
@@ -184,10 +185,12 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Sistemas de arquivos</h1>
+<h4 class="author"><em>Pedro Correa</em></h4>
 
 </div>
 
 
+<p><a href="https://pt.m.wikibooks.org/wiki/Sistemas_operacionais/Sistemas_de_arquivos">Referência do resumo foi tirado deste artigo</a></p>
 <p>Os sistemas de arquivos estruturam a informação guardada em uma unidade de armazenamento, podendo ser representada de forma textual ou graficamente. O habitual é utilizar dispositivos de armazenamento de dados que permitem o acesso aos dados como uma corrente de blocos de um mesmo tamanho, usualmente de 512 bytes de largura. O software do sistema de arquivos é responsável pela organização destes setores em arquivos e diretórios e matém um registro de que setores pertencem a que arquivos e quais não têm sido utilizados.</p>
 <p>Em geral os sistemas de arquivos proveem métodos essenciais para criar, mover, renomear e eliminar tanto arquivos como diretórios. Outros permitem a criação de enlaces (links) adicionais a um diretório ou arquivo.</p>
 <div id="caracteristicas-dos-sistemas-de-arquivos" class="section level2">
@@ -258,7 +261,10 @@ $(document).ready(function () {
 <div id="cache-de-sistemas-de-arquivos" class="section level2">
 <h2>Cache de Sistemas de Arquivos</h2>
 <p>Uma cache de disco pode ser definida como parte da memória RAM ou memória buffer cache, utilizada para acelerar o acesso aos dados que estão sendo mais frequentemente requeridos. Para isso a cache de disco pode ser implementado de duas formas principais:</p>
-<p>1- Através da memória RAM inserida no próprio disco rígido 2- Utilização de parte da memória RAM</p>
+<ol style="list-style-type: decimal">
+<li>Através da memória RAM inserida no próprio disco rígido</li>
+<li>Utilização de parte da memória RAM</li>
+</ol>
 <p>Caches de disco rígido são mais eficientes, mas são também muito mais caras. Todos os discos rígidos modernos possuem uma cache interna. Para complementar a cache interno, os SOs criam um segundo cache usando a memória RAM.</p>
 <p>Caches de disco funcionam armazenando os dados mais acessados. Quando um programa precisa acessar um novo dados. o SO primeiramente verifica se os dados estão na cache antes de lê-lo do disco. Isso poque o acesso à memória RAM é muito mais rápido do que o acesso ao disco.</p>
 </div>
