@@ -55,6 +55,7 @@ output: html_document
 > ------ | ----------------------------------------------------------------------
 > 06/08  | [Introdução](sixth-period/Redes/06-08/index.html)
 > 13/08  | [DNS](sixth-period/Redes/13-08/index.html)
+> 17/09  | [Camada de Transporte](sixth-period/Redes/17-09/index.html)
 
 > ### Linguagens Formais e Automatos
 >
@@ -66,7 +67,9 @@ output: html_document
 
 > ### SO
 >
+> [Resumo](sixth-period/SO/Resume/index.html)
+>
 > Dia    | Matéria
 > ------ | ----------------------------------------------------------------------
 > 12/08  | [Arquivos](sixth-period/SO/12-08/index.html)
-> 16/08  | [Sistemas de Arquivos](sixth-period/SO/16-09/index.html)
+> 16/09  | [Sistemas de Arquivos](sixth-period/SO/16-09/index.html)
