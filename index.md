@@ -56,6 +56,7 @@ output: html_document
 > 06/08  | [Introdução](sixth-period/Redes/06-08/index.html)
 > 13/08  | [DNS](sixth-period/Redes/13-08/index.html)
 > 17/09  | [Camada de Transporte](sixth-period/Redes/17-09/index.html)
+> 15/10  | [Camada de Rede](sixth-period/Redes/15-10/index.html)
 
 > ### Linguagens Formais e Automatos
 >
