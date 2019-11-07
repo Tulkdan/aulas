@@ -37,7 +37,7 @@ Os autômatos finitos apresentam um formalismo operacional ou reconhecedor confo
 
 Em termos de poder computacional, podemos afirmar que o três modelos apresentados são equivalentes.
 
-##### Autômatos finitos Determinísticos
+##### Autômatos Finitos Determinísticos
 
 É uma máquina contituida, basicamenete, de trẽs partes:
 
@@ -45,7 +45,25 @@ Em termos de poder computacional, podemos afirmar que o três modelos apresentad
 2. Unidade de Controle: reflete o estado corrente da máquina
 3. Programa: função de transição
 
-$$ M = (\Sigma, Q, \delta, q, F) $$
+Um **AFD** é um **quíntupla** ordenada
+
+$$ M = (\Sigma, Q, \delta, q_{0}, F) $$
+
+* $\Sigma$ é um alfabeto (finito e não-vazio) de entrada
+* $Q$ é um conjunto finito de estados possíveis
+* $\delta$ é uma função de transição
+* $q_{0}$ é o elemento que representa o estado inicial
+* $F$ é o conjunto de estados finais
+
+---
+
+Interpretando a fução de transição abaixo, teremos a resultante no estado $q_{3}$
+
+$$ \delta (q_{0}, a) = q_{3} $$
+
+Supondo que a função de transição é definidapara o estado $q_{0}$ ao ler o símbolo **a**, resultando no estado $q_{3}$.
+
+---
 
 **Estados** são nodos, respresentados por círculos, lembrando que por convenção, utilizaremos o nome dos estados sempre representado pela letra q, e serão diferenciados por um índice.
 
@@ -63,9 +81,27 @@ A parada de processamento de autômato finito para uma entrada w pode ser de dua
 
 1. **Aceita a entrada w**, após processa o último símbolo da fita, o autômato finito assume um estado final.
 2. **Rejeita a entrada w**, são duas possibilidades:
-    + 2.1 após processa o último símbolo da fita, o autômato finito assume um estado não final
-    + 2.2 Em algum momento, ao longo do processamento de w, a função programa é indefinida para o argumento
+    * 2.1 após processa o último símbolo da fita, o autômato finito assume um estado não final
+    * 2.2 Em algum momento, ao longo do processamento de w, a função programa é indefinida para o argumento
 
 $\delta$ | a  | b
 -------- | -- | -
 q0       | q1 | q2
+
+## Exemplo
+
+Seja M um AFD, onde sua representação algébrica é $M = (\Sigma, Q, \delta, q_{0}, F)$, verifique as regras abaixo:
+
+* O AFD deve reconhecer as subpalavras **aa** e **bb**
+* Considerando a seguinte linguagem sobre o $\Sigma = {a, b}$
+* L = { w | w possui aa ou bb como subpalavra }
+
+Seja M um autômato finito determinístico, definido abaixo. Sua representação algébria é:
+
+$\delta$ |    a    | b
+-------- | ------- | ----------
+$q_{0}$  | $q_{1}$ | $q_{2}$
+$q_{1}$  | $q_{f}$ | $q_{2}$
+$q_{2}$  | $q_{1}$ | $q_{f}$
+$q_{f}$  | $q_{f}$ | $q_{f}$
+

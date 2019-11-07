@@ -220,14 +220,27 @@ $(document).ready(function () {
 </ul>
 <p>Em termos de poder computacional, podemos afirmar que o três modelos apresentados são equivalentes.</p>
 <div id="automatos-finitos-deterministicos" class="section level5">
-<h5>Autômatos finitos Determinísticos</h5>
+<h5>Autômatos Finitos Determinísticos</h5>
 <p>É uma máquina contituida, basicamenete, de trẽs partes:</p>
 <ol style="list-style-type: decimal">
 <li>Fita: Dispositivo de entrada, qual contém a informação a ser processada</li>
 <li>Unidade de Controle: reflete o estado corrente da máquina</li>
 <li>Programa: função de transição</li>
 </ol>
-<p><span class="math display">\[ M = (\Sigma, Q, \delta, q, F) \]</span></p>
+<p>Um <strong>AFD</strong> é um <strong>quíntupla</strong> ordenada</p>
+<p><span class="math display">\[ M = (\Sigma, Q, \delta, q_{0}, F) \]</span></p>
+<ul>
+<li><span class="math inline">\(\Sigma\)</span> é um alfabeto (finito e não-vazio) de entrada</li>
+<li><span class="math inline">\(Q\)</span> é um conjunto finito de estados possíveis</li>
+<li><span class="math inline">\(\delta\)</span> é uma função de transição</li>
+<li><span class="math inline">\(q_{0}\)</span> é o elemento que representa o estado inicial</li>
+<li><span class="math inline">\(F\)</span> é o conjunto de estados finais</li>
+</ul>
+<hr />
+<p>Interpretando a fução de transição abaixo, teremos a resultante no estado <span class="math inline">\(q_{3}\)</span></p>
+<p><span class="math display">\[ \delta (q_{0}, a) = q_{3} \]</span></p>
+<p>Supondo que a função de transição é definidapara o estado <span class="math inline">\(q_{0}\)</span> ao ler o símbolo <strong>a</strong>, resultando no estado <span class="math inline">\(q_{3}\)</span>.</p>
+<hr />
 <p><strong>Estados</strong> são nodos, respresentados por círculos, lembrando que por convenção, utilizaremos o nome dos estados sempre representado pela letra q, e serão diferenciados por um índice.</p>
 <p><strong>Transições</strong> são arestas, ligando os correspondentes nodos. Seão representados por uma seta com um único elemento do alfabeto</p>
 <p><strong>Estado Inicial</strong> denota o ponto de partida do autômato. Será representado por uma seta que denota o ponto inicial, e que não representa uma transição de estados.</p>
@@ -259,6 +272,47 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+</div>
+<div id="exemplo" class="section level2">
+<h2>Exemplo</h2>
+<p>Seja M um AFD, onde sua representação algébrica é <span class="math inline">\(M = (\Sigma, Q, \delta, q_{0}, F)\)</span>, verifique as regras abaixo:</p>
+<ul>
+<li>O AFD deve reconhecer as subpalavras <strong>aa</strong> e <strong>bb</strong></li>
+<li>Considerando a seguinte linguagem sobre o <span class="math inline">\(\Sigma = {a, b}\)</span></li>
+<li>L = { w | w possui aa ou bb como subpalavra }</li>
+</ul>
+<p>Seja M um autômato finito determinístico, definido abaixo. Sua representação algébria é:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\delta\)</span></th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(q_{0}\)</span></td>
+<td><span class="math inline">\(q_{1}\)</span></td>
+<td><span class="math inline">\(q_{2}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(q_{1}\)</span></td>
+<td><span class="math inline">\(q_{f}\)</span></td>
+<td><span class="math inline">\(q_{2}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(q_{2}\)</span></td>
+<td><span class="math inline">\(q_{1}\)</span></td>
+<td><span class="math inline">\(q_{f}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(q_{f}\)</span></td>
+<td><span class="math inline">\(q_{f}\)</span></td>
+<td><span class="math inline">\(q_{f}\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
