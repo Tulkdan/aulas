@@ -67,6 +67,9 @@ output: html_document
 > 14/08  | [Sintaxes e Semântica](sixth-period/LingFormaisAutomatos/14-08/index.html)
 > 28/08  | [Linguagem e Gramática](sixth-period/LingFormaisAutomatos/28-08/index.html)
 > 16/10  | [Linguagens Regulares](sixth-period/LingFormaisAutomatos/16-10/index.html)
+> 23/10  | [Autômatos Finito Não Determinístico (AFN)](sixth-period/LingFormaisAutomatos/23-10/index.html)
+> 06/11  | [Autômatos Finito com Movimentos Vazios](sixth-period/LingFormaisAutomatos/06-11/index.html)
+> 13/11  | [Autômato com pilha e Máquina de Turing](sixth-period/LingFormaisAutomatos/13-11/index.html)
 
 > ### SO
 >
