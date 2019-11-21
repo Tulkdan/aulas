@@ -38,7 +38,7 @@ Router(config)# ip route network-address subnet-mask (ip-address | exit-interfac
 
 Parâmetro       | Descrição
 --------------- | ------------------------------
-network-address | Endereço da rede de destino da rede remota a ser adicionado a tabela de roteamento
+network-address | Endereço da rede (ID da subrede) de destino da rede remota a ser adicionado a tabela de roteamento
 subnet-mask     | Máscara de sub-rede da rede remota a ser adicionada a tabela de roteamento. A máscara de sub-rede pode ser modificada para sumarizar um grupo de redes
-ip-address      | Normalmente conhecido como endereço IP do roteador do próximo salto
+ip-address      | Normalmente conhecido como endereço IP do roteador do próximo salto (IP da roteador onde deverá fazer o salto)
 exit-interface  | Interface de saída usada no encaminhamento de pacotes para a
