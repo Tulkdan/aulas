@@ -41,6 +41,19 @@ Uma tatica que pode funcionar com uma porcentagem de pessoas,
 pode acabar gerando o efeito contrario em outra porcentagem de pessoas,
 criando assim uma propaganda negativa para a sua marca.
 
+Como o titulo vai ser o primeiro contato do usuario com o seu produto eh de extrema importancia passar uma boa primeira impressao.
+Pois em um estudo realizado por um psicologo da Australia chamado *Ullrich Ecker* na *University of Western Australia* foi concluido que os titulos podem interferir no meio como iremos interpretar o texto,
+e ate mudar a nossa visao sobre o que foi retratado.
+
+O estudo foi realizado com que a discrepancia dos titulos e imagens mostradas alterem o entendimento do texto.
+O tema utilizado foi noticias que continham uma pessoa "mal" (o que realizou o crime) e uma pessoa "boa" (a vitima do crime ou o policial).
+E os titulos sempre continhas algo como exemplo "Avo foi morto na cidade Tal".
+E eles alternavam a foto, podendo ser do criminoso ou da vitima.
+
+Apos isso, os estudantes deveriam votar em quem eles pensavam que devariam ser o "mal" e o "bom".
+E foi nesse estudo que Ecker notou que houve discrepancia,
+nas materias em que os titulos divergiam o criminoso recebia mais pontos positivos do que quando o titulo estava correto.
+
 ## 3 Solucao
 
 Com isso, queremos utilizar a inteligencia artificial para nos ajudar a criar um ferramenta que possa nos ajudar com uma solucao.
