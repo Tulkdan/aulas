@@ -67,4 +67,59 @@ o titulo se tornaria sensacionalista nesse meio.
 
 E apos conseguirmos fazer criarmos um gerador de titulo e perfil para nossos usuarios, iremos juntar as duas ideias e testarmos com o usuarios para verificarmos se houve ou nao um interesse pelo conteudo que os usuario nao acessaram anteriormente.
 
+## 4 Justificativa
 
+Notamos um crescimento muito grande na area de inteligencia artificial nos ultimos tempos, e ainda mais na unicao desta tecnologia com sistemas de recomendacao de conteudo.
+Empresas estao com um crescimento enormes quando utilizam essa tecnologia com uma estrategia de crescimento, sempre olhando o que sera beneficiado e se eh possivel eles suportarem tal tecnologia.
+Um exemplo que grande parte das pessoas utiliza eh o Netflix, que se especializou nessa parte pois uma porcao muito forte deles esta nisso, recomendacao de conteudo para seus clientes.
+Eh muito dificil vermos o Netflix sem essa feature, pois ja se tornou a base do produto vendido por eles.
+
+Tambem com a popularizacao dos celulares, notamos que eh muito facil criarmos informacao nossa na internet. Varias outras empresas utilizam isso para fazer target de propagandas, podemos cita exemplo como o Facebook e Google, que possuem uma grande parte da internet atual e um grande fluxo do que eh realizado na internet.
+
+E acreditamos que a area de propagando nao acompanhou a essa mudanca de tecnologia que convivemos.
+Logico que eles se adaptaram para fazer parcerias e ate colocar suas propagandas em sites de terceiros usando ferramentas como o Google Ads,
+mas o potencial que as propagandas poderiam ter utilizando essa massa de dados que existe hoje em dia e utilizar os recomendadores de conteudo para criar os titulos personalizados para seus clientes,
+acreditamos que eles poderiam atingir uma quantidade maior de pessoas do que atualmente atingem.
+
+## 5 Metodologia
+
+### Metodologia
+
+Pensamos em dividir nosso trabalho em cinco partes, assim conseguimos trabalhar em paralelo sem que ninguem atrapalhe e sem o outro ficar pendente do outro.
+
+Assim, a primeira parte iria consistir de utilizarmos a api do Google News, que ira trazer algumas noticias e materias que poderemos utilizar.
+A API somente traz o titulo, dia da publicacao, fonte e site de onde foi publicado, o que eh perfeito para nosso uso, pois iremos somente necessitar do conteudo do artigo/noticia.
+Assim, iremos criar um scrapper que ira baixar o site (ja que a API traz somente a url da noticia) e passar para o sistema de taggeamento.
+Que ira ler o texto e criar a tag para conseguirmos associar aquela noticia/artigo com o tema que esta sendo passado por ele.
+
+E apos isso iremos armazenas no nosso banco de dados.
+Escolhermos utilizar o Google Sheets como banco de dados pois o mesmo ira se comportar como o MongoDb, que eh NoSQL, e como, acreditamos, nao iremos trabalhar com uma massa de dados muito grande, acreditamos que ele nos servira perfeitamente.
+
+
+### Metodologia
+
+Apos isso iremos trabalhar em duas funcionalidades, em um identificador de palavras-chaves no texto e outro para geracao de titulos com base nas palavras-chaves.
+Essa parte nao sera utilizada pelo sistema, mas ira ser necessario como objeto de estudo para vermos como podemos gerar titulos com base em algumas palavras-chaves.
+
+### Metodologia
+
+Nesta etapa eh para a identificacao de usuario, escolhemos utilizar o cookie gerado no aparelho de acesso do usuario pela sua facilidade no desenvolvimento e rapidez, assim, nao iriamos perder tanto tempo criando um sistema de autenticacao de usuario.
+Tambem iremos instruir nossos usuarios que irao testar conosco para utilizarem o mesmo aparelho.
+
+Uma parte importante nesse estudo, eh que iremos apenas utilizar como base o titulo dos artigos/noticias.
+Nao iremos levar em consideracao nenhuma imagem, nem o local da publicacao quando formos mostrar ao usuario, pois acreditamos que esses dois itens podem interferir na hora da decisao do usuario de acessar algo.
+
+### Metodologia
+
+E eh nesta parte onde iremos conseguir criar o perfil do usuario.
+Iremos criar o perfil com base nas tags encontradas nos artigos/noticias, assim, quando o usuario clicar em artigos/noticias que forem de esporte, podemos notar que ele tem um perfil de pessoa que curte mais esportes.
+
+Outra parte importante aqui, eh como iremos armazenar os artigos/noticias que o usuario visualizou e as noticias na qual ele clicou.
+Pois para sabermos no final se houve um aumento de interesse em determinado assunto, e que, possivelmente, nao foi clicado anteriormente, devemos saber dos artigos/noticias que o usuario apenas visualizou e nao clicou.
+
+
+### Metodologia
+
+E eh nessa parte onde iremos tirar a nossa conclusao.
+Apos termos o perfil do usuario e o que ele nao acessou, e tambem a nossa funcao para geracao de titulos com base em tags e conteudo do artigo/noticia,
+iremos verificar se ha um interesse em materias com temas que o usuario nao acessou anteriormente pois nao faziam parte do perfil de consumo dele.
