@@ -1,0 +1,73 @@
+\section{Análise Sintática}
+
+Nesta parte é responsável por determinar se o programa de entrada representado pelo fluxo de tokens possui as sentenças válidas para a linguagem de programação.
+
+Esse modelo pode ser definido utilizando gramáticas livres de contexto que representam uma gramática formal e pode ser escrita através de algoritmos que fazem a derivação de todas as possíveis construções da linguagem.
+Essas derivações tem como objetivo determinar se o fluxo de palavras fazem sentido na sintaxe da linguagem de programação.
+
+\subsection{Gramática Livre de Contexto - GLC}
+
+Em geral, quase todas as linguagens de programação pertencem a uma categoria chamada de Linguagens Livres de Contexto,
+estes que são a base para a construção de analisadores sintáticos.
+Eles são utilizados para especificar as regras sintáticas de uma linguagem de programação,
+uma linguagem regular pode ser reconhecida por um automato finito determinístico e não determinístico,
+já uma GLC pode ser reconhecida por um automato de pilha.
+
+Uma gramática descreve naturalmente como é deve ser realizado as construções no programa.
+Um exemplo que podemos utilizar é este \emph{if} na linguagem Pascal:
+
+\emph{if (expression) then declaration else declaration ;}
+
+Essa mesma forma em GLC é expressada da seguinte maneira:
+
+\emph{declaration \textrightarrow  if ( expression ) then declaration else declaration ;}
+
+A definição formal de uma GLC pode ser representada através dos seguintes componentes:
+
+\emph{G = (N, T, P, S)}
+
+Onde:
+
+\begin{itemize}
+  \item N - Conjunto finito de símbolos não terminais.
+  \item T - Conjunto finito de símbolos terminais.
+  \item P - Conjunto de regras de produções.
+  \item S - Símbolo inicial da gramática.
+\end{itemize}
+
+\subsection{Derivações}
+
+Durante este etapa é aplicado a regra de produção para substituir cada símbolo não terminal por um símbolo terminal,
+permitindo identificar se certa cadeias de caracteres pertence a linguagem.
+O resultado deste processo é a árvore de derivação.
+
+Tipos de derivação:
+
+\begin{itemize}
+  \item Top-Dowm: Examina os símbolos terminais da esquerda para a direita, formando uma árvore sintática de cima para baixo.
+  \item Bottom-Up: Examina os símbolos terminais da direita para a esquerda, formando uma árvore sintética de baixo para cima.
+\end{itemize}
+
+A utilização de qual algoritmo deve ser utilizado para realizar esta tarefa não possui tanta importancia,
+pois sempre no final deverá ter o mesmo resultado,
+caso a árvore final seja diferente temos uma ambiguidade.
+
+\subsection{Ambiguidade}
+
+Certas gramaticas permitem que a mesma sentença possua mais de uma árvore de derivação,
+tornando a gramática inadequada para a linguagem de programação pois o compilador não consegue definir a estrutura do programa fonte.
+Duas derivações podem gerar uma única árvore sintática, mas duas árvores sintáticas não podem ser geradas por uma derivação.
+
+Uma ambiguidade pode ser evitada de duas formas:
+
+\begin{enumerate}
+  \item Reescreven a gramática afim de remover a ambiguidade, podendo torná-la mais complexa.
+  \item Definir ordens de prioridade durante a derivação.
+\end{enumerate}
+
+\section{Geradores de analisadores sintáticos}
+
+Igual ao comportamento de construir analisadores léxicos, os analisadores sintáticos podem ser construídos através de ferramentas que auxiliam neste trabalho.
+
+Basta um arquivo de configurações sintáticas e através de comandos é possível gerar um analisador sintático.
+A saída é um arquivo de código com a implementação do analisador sintático.

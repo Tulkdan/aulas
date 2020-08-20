@@ -1,0 +1,60 @@
+\section{Análise Léxica}
+
+É a primeira fase do processo de compilação, no qual tem o objetivo de identificar unidades léxicas que compõem o programa.
+O analisador léxico lê todos os caracteres do programa fonte e verifica se eles pertencem ao alfabeto da linguagem.
+Caso não exista, deveŕa ser gerado um erro léxico.
+É nesta parte também em que ele remove todos os espaços em branco e comentários.
+
+Após essa primeira etapa de verificação, ele deverá quebrar o texto em lexemas,
+este que é uma sequência de caracteres que são reconhecidos pelo compilador e que são esperados por ele,
+um exemplo são as palavras reservadas.
+Nesta etapa as expressões regulares possuem um mecanismo bastante importante para ajudar no reconhecimento e padronização dos lexemas.
+
+Após o compilador reconhecer e mapear os lexemas, ele passa para a parte dos tokens,
+que são os lexemas indentificados de forma que seja mais facil a compreensão das palavras reservadas e variáveis que devem ser declaradas.
+
+Os tokens podem ser divididos em dois grupos:
+
+\begin{itemize}
+  \item \textbf{Tokens simples}: são tokens que não têm valor associado pois a classe do token já a descreve.
+    Exemplo: palavras reservadas, operadores, delimitadores.
+  \item \textbf{Tokens com argumento}: são tokens que têm valor associado e corresponde a elementos da linguagem definidos pelo programador.
+    Exemplo: variáveis, contantes numéricas.
+\end{itemize}
+
+Um exemplo da estrutura de token seria o seguinte:
+
+\emph{<nome-token, valor-atributo>}
+
+Onde o \textbf{nome do token} corresponde a classificação definida pelo compilador da linguagem, por exemplo: número, variáveis, constantes.
+E o \textbf{valor do atributo} corresponde a um valor qualquer que pode ser atribuído ao token, por exemplo o valor de entrada ou o valor recebido na hora da execução.
+
+\subsection{Exemplo de análise léxica}
+
+Para esclarecer melhor a ideia do que seria um token e como é o comportamento dele, vamos utilizá-lo no seguinte trecho de código:
+
+\emph{total = entrada * saida () + 2}
+
+Assim, nesta declaração temos as classificações:
+
+\begin{itemize}
+  \item \emph{<id, 15>}: apontador 15 da tabela de símbolos e classe do token \emph{id}.
+  \item \emph{<=, >}: operador de atribuição, sem necessidade de um valor para o atributo.
+  \item \emph{<id, 20>}: apontador 20 da tabela de símbolos e classe do token \emph{id}.
+  \item \emph{<*, >}: Operador de multiplicação, sem necessidade de um valor para o atributo.
+  \item \emph{<id, 30>}: apontador 30 da tabela de símbolos e classe do token \emph{id}.
+  \item \emph{<+, >}: operador de soma, sem necessidade de um valor para o atributo.
+  \item \emph{<(, >}: delimitador de função.
+  \item \emph{<), >}: delimitador de função.
+  \item \emph{<numero, 2>}: token numérico, com valor para o atributo 2 indicado o valor do número.
+\end{itemize}
+
+\subsection{Erros léxicos}
+
+Esta etapa de análise léxica é muito inocente para identificar alguns erros de compilação que podem existir, um exemplo seria:
+
+\emph{fi (a == '123')}
+
+Onde o analisador não iŕa identificar que a palavra \emph{fi} deveria ser declarada \emph{if}.
+Essa validação somente é possível ser feita na análise sintética.
+
