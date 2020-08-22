@@ -1,0 +1,29 @@
+\section{Análise Semântica} 
+
+Esta etapa é responsável por verificar aspectos relacionados ao significado das instruções e também a validação sobre uma série de regras que não podem ser verificadas nas etapas anteriores.
+
+As validações que não são realizadas durante as etapas anteriores são realizadas durante a análise semântica a fim de garantir que o programa fonte esteja coerente e o mesmo possa ser convertido para a linguagem de máquina.
+A análise semântica percorre a árvore sintática e relaciona os identificadores com sues dependentes de acordo com a estrutura hierárquica.
+
+Esta etapa também é responsável pela captura de informações sobre o programa fonte para que as fases subsequentes gerem o código objeto,
+outro fator importante desta fase é a validação de tipos,
+nela o compilador verifica se cada operador recebe os operandos permitidos e especificados na linguagem fonte.
+
+Os tipos de dados são muito importantes nessa etapa da compilação, pois eles são os responsáveis por dar características para as linguagens de programação.
+Com base nos tipos, o analisado semântico pode definir quais valores podem ser manipulados, essa ação é conhecida como \emph{type checking}.
+
+\subsection{Inferência de tipos}
+
+O sistema de tipos de dados podem ser divididos em dois grupos: sistemas dinâmicos e sistemas estáticos.
+Muitas das linguagens utilizam o sistema estático pois essa informação é utilizada durante a compilação e simplifica o trabalho do compilador.
+Esse sistema é muito predominante em linguagens compiladas.
+
+\begin{itemize}
+  \item \textbf{Sistema de tipo estático}: obrigam o programador definir os tipos das variáveis e retorno de funções, exemplos de linguagens: C, Java, Pascal.
+  \item \textbf{Sistema de tipo dinâmico}: variáveis e retorno de funções não possuem declaração de tipos, exemplos de linguagens: Python, PHP, Javascript.
+\end{itemize}
+
+Algumas linguagens utilizam um mecanismo muito interessante chamado inferẽncia de tipos,
+que permite a uma variável assumir vários tipos durante o seu ciclo de vida, permitindo que ela consiga ter vários valores.
+Nesses casos o compilador infere o tipo da variável em tempo de execução, esse mecanismo esta diretamente relacionado ao mecanismo de \emph{Generics} do Java.
+Linguagens de programação como o Haskel utilizam esse método.
