@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{indentfirst}
+\usepackage[brazilian]{babel}
+
+\usepackage{textcomp}
+
+%enconding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\author{
+  Pedro Correa\\
+  \texttt{11718563} - \texttt{pedro.figueiredo563@al.faj.br}
+}
+
+\title{Lista de Execício}
+
+\begin{document}
+
+\maketitle
+
+\section{De forma sucinta, explique com suas palavras o que é o compilador}
+
+O compilador é responsável por transformar a linguagem de programação que foi realizada em linguagem humana para a linguagem de máquina.
+Com o passar dos tempos, o compilador também foi tendo mais funcionalidades com ele, uma parte também é auxiliar o desenvolvedor a seguir algumas regras para fazer seu trabalho da melhor forma e também para mostrar-lhe alguns erros que podem existir antes do programa ser traduzido para linguagem de máquina,
+assim o desenvolvedor não precisa executar o seu código para ver se o que ele fez está ocorrendo certo, o compilador lhe auxilia nessa tarefa.
+
+\section{Com o objetivo de identificar as vantagens e desvantagens entre compiladores e interpretadores, comente as características dos métodos.}
+
+Umas das maiores vantagens que o compilador possui sobre o interpretador é que o trabalho dele será transformar o código realizado em binário,
+com isso o desenvolvedor pode executar a parte o programa mais tarde sem precisar passar por todo o processamento de validação.
+Outra vantagem é a perfomance, pois não é necessário fazer uma `tradução' da linguagem para outro linguagem e compilar como é o caso das linguagens interpretadas.
+
+A vantagem do interpretador é que ele é utilizado em linguagens de alto níveis, que no caso são mais próximos a linguagem humana e o desenvolvedor não precisa se preocupar com tantas coisas como em linguagens de baixo nívels necessitam (exemplo seria o gerenciamento de memória).
+Outra vantagem é o feedback mais rápido de se algo não está correto na linguagem de programação que o desenvolvedor está trabalhando,
+agilizando assim o trabalho do programador.
+
+\section{Explique o que é o processo just-in time utilizado em alguns interpretadores.}
+
+Esse método é utilizado para fazer a compilação da parte de um programa que necessita ser executado naquela hora,
+sem precisar compilar todo o código fonte e que provavelmente não será utilizado naquele momento.
+Isto é muito bom para aproveitamento de memória RAM e rapidez para testar na hora do desenvolvimento.
+
+\section{É possível afirmar que uma GLC é suficiente para atender os requisitos das linguagens de programação?}
+
+\section{Qual a diferença entre lexema e token?}
+
+\section{O que é otimização de código?}
+
+\section{Dê dois exemplos de erros sintáticos (em uma linguagem de sua escolha)}
+
+\section{Dê dois exemplos de erros semânticos (em uma linguagem de sua escolha)}
+
+\section{Crie um autômato finito capaz de atuar como um analisador léxico. O AF deve ser capaz de identificar e reconhecer números inteiros, identificadores (alfanuméricos) e a palavra reservada “if”.}
+
+\end{document}
+
