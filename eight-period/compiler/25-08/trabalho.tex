@@ -22,6 +22,8 @@
 
 \maketitle
 
+\newpage
+
 \section{De forma sucinta, explique com suas palavras o que é o compilador}
 
 O compilador é responsável por transformar a linguagem de programação que foi realizada em linguagem humana para a linguagem de máquina.
@@ -46,15 +48,40 @@ Isto é muito bom para aproveitamento de memória RAM e rapidez para testar na h
 
 \section{É possível afirmar que uma GLC é suficiente para atender os requisitos das linguagens de programação?}
 
+Não, não é possível fazer todas as validações por uma GLC,
+ainda faltam a parte de validação da análise sintática.
+
+Mas temos alguns marcadores que podem se beneficiar somente dessa etapa, o HTML é um deles.
+
 \section{Qual a diferença entre lexema e token?}
+
+\textbf{Lexema}: menor parte reconhecível do sistema semântico de uma língua.
+
+\textbf{Token}: segmento de texto ou símbolo que pode ser manipulado por um analisador sintático.
 
 \section{O que é otimização de código?}
 
+A otimização de código é um método para diminuir a complexidade do código,
+complexidade se refere a quantas vezes algum pedaço de código será executado.
+Existe a medida da notação \emph{O}, que faz a referência a complexidade do código,
+
+Exemplo: \emph{O(n)}, seria um código com complexidade linear, quanto mais dados terá que processar, mais demorado será a execução dele.
+
 \section{Dê dois exemplos de erros sintáticos (em uma linguagem de sua escolha)}
+
+Utilizado na linguagem de Javascript:
+
+\emph{console.log('hello world}
+
+\emph{console.log(hello world)}
 
 \section{Dê dois exemplos de erros semânticos (em uma linguagem de sua escolha)}
 
-\section{Crie um autômato finito capaz de atuar como um analisador léxico. O AF deve ser capaz de identificar e reconhecer números inteiros, identificadores (alfanuméricos) e a palavra reservada “if”.}
+Utilizado na linguagem de Javascript:
+
+\emph{const dividedByZero = 10 / 0}
+
+\emph{const dividedByString = 10 / 'dez'}
 
 \end{document}
 
