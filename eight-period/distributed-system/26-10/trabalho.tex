@@ -1,0 +1,85 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{url}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{indentfirst}
+\usepackage[brazilian]{babel}
+
+\usepackage{textcomp}
+
+%enconding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\author{
+  Pedro Correa\\
+  \texttt{11718563} - \texttt{pedro.figueiredo563@al.faj.br}
+}
+
+\title{Saas ou On-Premises}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Software as a Service (SaaS)}
+
+Nos anos 1990, com a popularidade e expansão da internet, começou a surgir a ideia de centralizar toda a computação, essa ideia ficou conhecida como \emph{application service providers} (ASP).
+A ideia dessas ASPs seria prover serviços de hosting e gerenciamento de aplicações especializados com o objetivo de reduzir os custos através de um central de administração.
+
+O \emph{Software as a Service} (SaaS) extende essa definição do ASP. Porém ele é mais utilizado nas seguintes configurações:
+
+\begin{itemize}
+  \item Enquanto a maioria dos ASPs focava no gerenciamento e armazenar aplicações de terceiros, no SaaS geralmente são os contratados que desenvolvem e gerenciam o seu próprio \emph{software};
+  \item Enquanto a maioria dos ASPs oferecia aplicações client-server, as soluções utilizando o SaaS são mais predominante na web e apenas requer um web browser para navegar;
+\end{itemize}
+
+Como a forma de distribuição do SaaS é de forma indireta e não é fisicamente,
+a forma de pagamento para se utilizar este serviço acaba sendo totalmente diferente do software que necessitam uma licença para ser utilizado e instalado.
+Com isto muitos provedores optaram pelo método de cobrar utilizando um assinatura mensal para que o contratante consiga se beneficiar de todos as \emph{features} disponíveis pela empresa.
+Desta forma eles conseguem fazer assinaturas por um preço muito mais baixo que uma licença de um programa.
+
+Também existe a possibilidade de cobrar o cliente por eventos,
+transações e outras unidades que possam gerar valor,
+um exemplo seria a quantatidade de processadores que estão sendo utilizados ou por tempo que um serviço utiliza de computação.
+
+A grande maioria das soluções que utilizam o SaaS utilizam a arquitetura baseada no \emph{multitenant}.
+O modelo simplesmente é para quando se utiliza uma única versão da aplicação e que serve vários clientes.
+Esta arquitetura facilita muito na escalabilidade do produto para ser instalado em múltiplas máquinas,
+e também facilita muito quando se deve testar novas funcionalidades que deve ser somente para um grupo de usuários.
+
+\section{On-Premises}
+
+\emph{Softwares} considerados On-Premises são \emph{softwares} que são instalados dentro da empresa, ou seja,
+são instalados em um \emph{hardware} que a empresa possui e que servirá como um servidor que irá distribuir o serviço que for instalado nele.
+
+Com isto, a empresa deverá ter total controle sobre como poderá escalar e também deverá ter o cuidade de fazer manutenção do servidor contra ataques que possivelmente possam ocorrer.
+
+\section{Diferença entre SaaS e On-Premises}
+
+A principal diferença entre os dois é simplesmente o modo de onde tudo será armazenado e utilizado para servir.
+Com o SaaS, como o serviço acaba sendo disponibilizado por um serviço de terceiro e tudo isso é protegido por um contrato e assinatura,
+acaba se tornando uma solução bem barata e simples caso a empresa não queira arcar com os custos de sustentar um servidor em sua rede,
+pois com isso deverá ter profissionais especializados em segurança, tratar de backups para não perder informações dos clientes e além de ter que possuir uma infra que suporte toda a demanda que seus clientes poderão ter.
+
+Porém um dos pontos fracos do SaaS em relação ao On-Premises é que a customização que o usuário possui é muito baixa,
+como os sistemas On-Premises são de propriedade da empresa por pagar uma licença por possuir o \emph{software}, ela consegue personalizar conforme a sua necessidade.
+Outro ponto forte em relação ao On-Premises é em relação as informações dos clientes da empresa, como o SaaS é outra empresa que está disponibilizando os serviços,
+eles podem ter acesso as informações da empresa que esteja traferrando entre os serviços.
+Assim, cabe a empresa se não for um problema tão grande assim as informações dela serem vazadas ou outras pessoas de fora dela poderem acessar tais informações.
+
+Para a escolha da empresa de qual utilizar ele deve levar em considerações os pontos citados acima, pois são esses fatores em especial que separa e torna cada uma das soluções especiais.
+Nenhum é a bala de prata que irá resolver todas as situações, cabe a empresa se quer ter todo o trabalho de dar suporte para um servidor e ter mais controle sobre as informações,
+então vale muito mais a pena ela escolher a solução do On-Premises.
+Caso ela não queira arcar com essas dívidas que podem, do dia pra noite se tornar uma super dor de cabeça para a empresa, seria mais favorárel escolher o SaaS como solução.
+
+\nocite{*}
+\bibliography{ref}
+\bibliographystyle{plain}
+
+\end{document}
+
