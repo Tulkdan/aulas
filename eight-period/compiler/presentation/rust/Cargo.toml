@@ -8,3 +8,6 @@ edition = "2018"
 
 [dependencies]
 rand = "0.6.5"
+jemallocator = "0.3"
+jemalloc-sys = {version = "0.3", features = ["stats"]}
+libc = "0.2"
