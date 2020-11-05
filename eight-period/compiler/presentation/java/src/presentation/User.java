@@ -19,4 +19,8 @@ public class User {
 
     email = createEmail;
   }
+
+  public String formatToCsv() {
+    return firstName + ";" + lastName + ";" + email + "\n";
+  }
 }

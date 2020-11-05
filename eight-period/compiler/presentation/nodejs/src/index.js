@@ -1,5 +1,18 @@
-const { open, convertToArray  } = require('./file')
+const { open, convertToArray, write  } = require('./file')
 const { pipe, getRandomFromArr } = require('./util')
+
+exports.main = () => {
+  const convertFile = pipe(open, convertToArray)
+  const names = convertFile('names.csv')
+  const pronomes = convertFile('pronomes.csv')
+
+  const createUser = pipe(generateFullName(pronomes), generateEmail, convertToCsv)
+
+  const users = names.map(createUser)
+
+  write('output.csv', users.join('\n'))
+  console.log('File has been created and written')
+}
 
 const generateEmail = fullName => {
   const providers = convertToArray(open('providers.csv'))
@@ -15,14 +28,6 @@ const generateFullName = pronomes => name => {
   return [name, randomLastName]
 }
 
-exports.main = () => {
-  const convertFile = pipe(open, convertToArray)
-  const names = convertFile('names.csv')
-  const pronomes = convertFile('pronomes.csv')
-
-  const createUser = pipe(generateFullName(pronomes), generateEmail)
-
-  const users = names.map(createUser)
-
-  console.log(users)
+const convertToCsv = user => {
+  return user.join(';')
 }

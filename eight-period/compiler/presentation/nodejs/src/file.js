@@ -6,6 +6,10 @@ exports.open = filename => {
   return fs.readFileSync(file)
 }
 
+exports.write = (filename, data) => {
+  fs.writeFileSync(filename, data);
+}
+
 exports.convertToArray = fileContent => {
   const arr = fileContent.toString().split('\n')
   arr.pop()

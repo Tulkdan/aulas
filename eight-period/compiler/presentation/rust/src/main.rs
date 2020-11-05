@@ -17,9 +17,15 @@ fn main() -> Result<(), Error> {
         users.push(user);
     }
 
+    let mut output = String::from("");
+
     for user in users {
-        println!("{:?}", user);
+        output =  format!("{}{}", output, user.format_to_csv());
     }
+
+    util::HelperFile::write("output.csv", &output);
+
+    println!("File has been created and written");
 
     Ok(())
 }

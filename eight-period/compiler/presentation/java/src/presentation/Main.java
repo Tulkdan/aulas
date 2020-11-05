@@ -22,9 +22,14 @@ public class Main {
       users.add(user);
     }
 
+    String output = "";
+
     for (User user : users) {
-      System.out.println("firstName: " + user.firstName + "\tLastName: " + user.lastName + "\tEmail: " + user.email);
+      output += user.formatToCsv();
     }
+
+    HelperFile.write(output);
+    System.out.println("File has been created and written");
   }
 
 }
