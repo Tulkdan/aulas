@@ -2,7 +2,6 @@ use rand::thread_rng;
 use rand::seq::SliceRandom;
 use std::fs::File;
 use std::io::{BufReader, Error, BufRead, Write};
-// use std::io::prelude::{write_all};
 use std::path::Path;
 
 #[derive(Debug)]
@@ -11,22 +10,19 @@ pub struct HelperFile {
 }
 
 impl HelperFile {
-    pub fn open(filename: String) -> Result<HelperFile, Error> {
-        let path = format!("../{}", filename);
-
-        let input = File::open(path)?;
+    pub fn open(filename: &str) -> Result<HelperFile, Error> {
+        let input = File::open(filename)?;
         let buffered = BufReader::new(input);
 
-        let mut content: Vec<String> = Vec::new();
-
-        for line in buffered.lines() {
-            content.push(String::from(line?));
-        }
+        let content: Vec<String> = buffered.lines()
+            .into_iter()
+            .filter_map(Result::ok)
+            .collect();
 
         Ok(HelperFile { data: content })
     }
 
-    pub fn write(filename: &str, data: &String) {
+    pub fn write(filename: &str, data: &str) {
         let path = Path::new(filename);
         let display = path.display();
 
@@ -45,17 +41,14 @@ impl HelperFile {
 }
 
 #[derive(Debug)]
-pub struct User {
+pub struct User<'a> {
     pub first_name: String,
-    pub last_name: String,
+    pub last_name: &'a str,
     pub email: String,
 }
 
-impl User {
-    pub fn new(first_name: String, last_name: String) -> Result<User, Error> {
-        let providers = HelperFile::open(String::from("providers.csv"))?;
-        let provider = get_random_from_arr(&providers.data);
-
+impl User<'_> {
+    pub fn new<'a>(first_name: String, last_name: &'a str, provider: &str) -> Result<User<'a>, Error> {
         let email = format!("{}.{}@{}", first_name, last_name, provider);
 
         Ok(User { first_name, last_name, email })
@@ -66,7 +59,7 @@ impl User {
     }
 }
 
-pub fn get_random_from_arr(arr: &Vec<String>) -> String {
-    arr.choose(&mut thread_rng()).unwrap().clone()
+pub fn get_random_from_arr<'a>(arr: &'a Vec<String>) -> &'a str {
+    arr.choose(&mut thread_rng()).unwrap()
 }
 
